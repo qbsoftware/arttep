@@ -2,7 +2,8 @@ version: '3.4'
 services:
 
   leprikon:
-    image: leprikon/leprikon
+    image: misli/arttep
+    build: .
     depends_on:
       - chat
       - mongo
