@@ -65,7 +65,7 @@
     </div>
 
     <div class="content">
-        <div class="row content-inner clearfix text-content">
+        <div class="row content-inner clearfix">
             <div class="col-md-9">
                 {% include 'leprikon/modal_messages.html' %}
                 {% block content %}{% endblock %}
@@ -77,13 +77,13 @@
                     {% include 'leprikon/user_dropdown.html' %}
                 </div>
                 <div style="clear: both; padding-top: 15px;">
-                    {% show_menu 1 100 0 100 'menu.html' 'CMSMenu,LeprikonMenu' %}
+                    {% show_menu 0 100 0 100 'menu.html' 'CMSMenu,LeprikonMenu' %}
                 </div>
             </div>
         </div>
     </div>
 
-    {% cache 3 footers %}
+    {% cache 300 footers %}
     {% upstream 'https://www.art-tep.cz/' '//div[@class="footer-contact"]'      '|="/|="https://www.art-tep.cz/|' %}
     {% upstream 'https://www.art-tep.cz/' '//div[@class="footer"]'              '|="/|="https://www.art-tep.cz/|' %}
     {% endcache %}

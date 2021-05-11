@@ -1,0 +1,1 @@
+{% if slug == 'syntacek' %}yellow{% elif slug == 'pirueta' %}light-blue{% elif slug == 'amadeus' %}green{% elif slug == 'picasso' %}red{% elif slug == 'dospeli' %}dark-blue{% endif %}
