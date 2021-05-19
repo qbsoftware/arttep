@@ -1,9 +1,9 @@
 {% load i18n leprikon_tags %}
 
 {% for reg in registrations %}
-<p class="button fl" style="margin-right: 15px">
-    <a href="{% url 'leprikon:registration_list' %}#{{ reg.slug }}">{% trans 'registration' %}: {{ reg }}</a>
-</p>
+<a href="{% url 'leprikon:registration_list' %}#{{ reg.slug }}">
+    {% trans 'registration' %}: {{ reg.group }}{{ reg.all_participants|comma_separated }}
+</a><br/>
 {% endfor %}
 
 {% if registration_allowed %}
@@ -13,7 +13,7 @@
         </a>
     </p>
 {% endif %}
-<span id="subject-{{ subject.id }}-registration-message">{{ registration_message }}</span>
+<p id="subject-{{ subject.id }}-registration-message" style="clear: both;">{{ registration_message }}</p>
 {% if subject.full %}{% trans 'The capacity is full.' %}{% endif %}
 
 {% if registration_start_in or registration_end_in %}
