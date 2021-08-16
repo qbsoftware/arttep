@@ -6,4 +6,4 @@ LABEL maintainer="Jakub Dorňák <jakub.dornak@misli.cz>"
 # copy files
 COPY static /app/static
 COPY templates /app/templates
-RUN leprikon collectstatic --no-input \
+RUN leprikon collectstatic --no-input
