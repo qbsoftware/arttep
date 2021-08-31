@@ -1,0 +1,5 @@
+#!/bin/bash
+
+django-admin makemessages --symlinks -l cs -e html,py,rml,txt
+vim locale/cs/LC_MESSAGES/django.po
+django-admin compilemessages
