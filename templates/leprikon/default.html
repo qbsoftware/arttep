@@ -1,4 +1,4 @@
-{% load i18n cache cms_tags menu_tags leprikon_tags rocketchat sekizai_tags staticfiles ganalytics %}
+{% load i18n cache cms_tags menu_tags leprikon_tags sekizai_tags staticfiles ganalytics %}
 <!doctype html>
 <html lang="cs">
 <head>
@@ -22,7 +22,6 @@
     {% upstream 'https://www.art-tep.cz/' '//head/script' '|="/|="https://www.art-tep.cz/|' %}
     {% endcache %}
     <link rel="stylesheet" type="text/css" media="all" href="{% static 'leprikon/css/layout.css' %}"/>
-    <link rel="stylesheet" type="text/css" media="all" href="{% static 'leprikon/css/chat.css' %}"/>
     {% if backends %}
     <!-- Bootstrap social -->
     <link rel="stylesheet" type="text/css" media="all" href="{% static 'leprikon/lib/font-awesome/css/font-awesome.min.css' %}"/>
@@ -90,7 +89,6 @@
             <div class="col-md-3">
                 <div style="float: right">{% school_year_form %}</div>
                 <div style="float: right">
-                    {% chat %}
                     {% include 'leprikon/user_dropdown.html' %}
                 </div>
                 <div style="clear: both; padding-top: 15px;">
@@ -105,6 +103,5 @@
     {% upstream 'https://www.art-tep.cz/' '//div[@class="footer"]'              '|="/|="https://www.art-tep.cz/|' %}
     {% endcache %}
     {% render_block "js" %}
-    {% livechat %}
 </body>
 </html>
