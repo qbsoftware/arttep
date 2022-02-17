@@ -36,8 +36,8 @@
         background-size: contain;
     }
 
-    .content .block .text {
-        text-align: justify;
+    .block.right {
+        text-align: left;
     }
 
     .tag {
@@ -82,11 +82,11 @@
 
     <div class="content">
         <div class="row content-inner clearfix">
-            <div class="col-md-9">
+            <div class="col-md-9 col-lg-10">
                 {% include 'leprikon/modal_messages.html' %}
                 {% block content %}{% endblock %}
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-lg-2">
                 <div style="float: right">{% school_year_form %}</div>
                 <div style="float: right">
                     {% include 'leprikon/user_dropdown.html' %}

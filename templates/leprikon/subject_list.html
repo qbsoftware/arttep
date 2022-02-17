@@ -5,7 +5,7 @@
 
 <div>
 {% for object in object_list %}
-{% cycle 'left' '' as image_side silent %}
+{% cycle 'left' 'right' as image_side silent %}
 {% include preview_template %}
 {% empty %}
 <p>{{ message_empty }}</p>
