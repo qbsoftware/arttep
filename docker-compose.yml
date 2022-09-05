@@ -21,8 +21,7 @@ x-leprikon: &leprikon
     SUPERVISORD_RUN: "gunicorn cron"
   volumes:
     - ./data:/app/data
-    - ./media:/app/htdocs/media
-    - ./static:/app/htdocs/static
+    - ./htdocs:/app/htdocs
     - ./run:/app/run
     - mysql:/var/run/mysqld
     - redis:/var/run/redis

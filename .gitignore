@@ -2,12 +2,11 @@
 *.pyo
 *.swp
 *~
+/htdocs
 /data
 /dkim
 /docker-compose.*.yml
-/media
 /mysql*
 /redis*
 /run
-/static
 /uploads
