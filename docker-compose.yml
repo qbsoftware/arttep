@@ -1,7 +1,7 @@
 version: '3.4'
 
 x-leprikon: &leprikon
-  image: misli/arttep
+  image: qbsoftware/arttep
   depends_on:
     - mysql
     - redis
@@ -21,7 +21,8 @@ x-leprikon: &leprikon
     SUPERVISORD_RUN: "gunicorn cron"
   volumes:
     - ./data:/app/data
-    - ./htdocs:/app/htdocs
+    - ./htdocs/media:/app/htdocs/media
+    - ./htdocs/static:/app/htdocs/static
     - ./run:/app/run
     - mysql:/var/run/mysqld
     - redis:/var/run/redis
