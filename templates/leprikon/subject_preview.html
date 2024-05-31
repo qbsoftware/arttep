@@ -1,6 +1,6 @@
 {% load i18n leprikon_tags sekizai_tags thumbnail %}
 
-<div class="block clearfix {{ image_side }} activity {% include 'subject_type_color.txt' with slug=object.subject_type.slug %}">
+<div class="block clearfix {{ image_side }} activity {% include 'subject_type_color.txt' with slug=object.subject_type.slug groups=object.all_groups %}">
 
     <div class="image">
         {% if object.photo %}

@@ -1,1 +1,12 @@
-{% if slug == 'syntacek' %}yellow{% elif slug == 'pirueta' %}light-blue{% elif slug == 'amadeus' %}green{% elif slug == 'picasso' %}red{% elif slug == 'dospeli' %}dark-blue{% elif slug == 'tabory' %}all{% endif %}
+{% if slug == 'syntacek' %}yellow
+{% elif slug == 'pirueta' %}light-blue
+{% elif slug == 'amadeus' %}green
+{% elif slug == 'picasso' %}red
+{% elif slug == 'dospeli' %}dark-blue
+{% elif slug == 'tabory' %}all
+{% else %}{% for group in groups %}
+    {% if group.name == "taneční" %}light-blue
+    {% elif group.name == "hudební" %}green
+    {% elif group.name == "výtvarný" %}red
+    {% else %}all{% endif %}
+{% empty %}all{% endfor %}{% endif %}
