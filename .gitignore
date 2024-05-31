@@ -6,6 +6,7 @@
 /data
 /dkim
 /docker-compose.*.yml
+/media*
 /mysql*
 /redis*
 /run
