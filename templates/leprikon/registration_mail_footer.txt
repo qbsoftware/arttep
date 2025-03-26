@@ -1,0 +1,10 @@
+{% load i18n %}{% trans 'You may check the current status of your registrations and payments using following link:' %}
+{{ site.url }}{% url 'leprikon:registration_list' %}
+
+S přátelským pozdravem
+za kolektiv učitelů
+MgA. Petra Žerníčková
+Umělecké centrum ART-TEP, spolek
+www.art-tep.cz
+Art-tep@centrum.cz
+Tel:774/841493

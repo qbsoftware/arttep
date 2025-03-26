@@ -1,0 +1,15 @@
+{% load i18n %}
+<p>
+    {% trans 'You may check the current status of your registrations and payments using following link:' %}<br/>
+    <a href="{{ site.url }}{% url 'leprikon:registration_list' %}">
+        {{ site.url }}{% url 'leprikon:registration_list' %}
+    </a>
+</p>
+
+<p>S přátelským pozdravem<br/>
+za kolektiv učitelů<br/>
+MgA. Petra Žerníčková<br/>
+Umělecké centrum ART-TEP, spolek<br/>
+www.art-tep.cz<br/>
+Art-tep@centrum.cz<br/>
+Tel:774/841493</p>
