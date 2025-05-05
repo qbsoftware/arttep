@@ -17,7 +17,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    {% cache 300 link_script %}
+    {% cache 3600 link_script %}
     {% upstream 'https://www.art-tep.cz/' '//head/link'   '|="/|="https://www.art-tep.cz/|' %}
     {% upstream 'https://www.art-tep.cz/' '//head/script' '|="/|="https://www.art-tep.cz/|' %}
     {% endcache %}
@@ -74,7 +74,7 @@
 <body class="detail yellow">
     {% cms_toolbar %}
 
-    {% cache 300 header %}{% upstream 'https://www.art-tep.cz/' '//div[@class="header"]' '|="/|="https://www.art-tep.cz/|' %}{% endcache %}
+    {% cache 3600 header %}{% upstream 'https://www.art-tep.cz/' '//div[@class="header"]' '|="/|="https://www.art-tep.cz/|' %}{% endcache %}
 
     <div class="intro">
         <div class="video-overlay"></div>
@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    {% cache 300 footers %}
+    {% cache 3600 footers %}
     {% upstream 'https://www.art-tep.cz/' '//div[@class="footer-contact"]'      '|="/|="https://www.art-tep.cz/|' %}
     {% upstream 'https://www.art-tep.cz/' '//div[@class="footer"]'              '|="/|="https://www.art-tep.cz/|' %}
     {% endcache %}
