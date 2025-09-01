@@ -8,27 +8,27 @@
 
 {% if registration_allowed %}
     <p class="button fl">
-        <a href="{{ registration_url }}" id="subject-{{ subject.id }}-registration-link">
+        <a href="{{ registration_url }}" id="activity-{{ activity.id }}-registration-link">
             {% trans 'fill in the registration form' %}
         </a>
     </p>
 {% endif %}
-<p id="subject-{{ subject.id }}-registration-message" style="clear: both;">{{ registration_message }}</p>
-{% if subject.full %}{% trans 'The capacity is full.' %}{% endif %}
+<p id="activity-{{ activity.id }}-registration-message" style="clear: both;">{{ registration_message }}</p>
+{% if activity.full %}{% trans 'The capacity is full.' %}{% endif %}
 
 {% if registration_start_in or registration_end_in %}
 <script defer="defer" async="async" type="text/javascript">
 {% if registration_start_in %}
 setTimeout(function(){
-    $('#subject-{{ subject.id }}-registration-link').removeClass('hidden');
-    $('#subject-{{ subject.id }}-registration-message').html('{{ registration_ends_message }}');
+    $('#activity-{{ activity.id }}-registration-link').removeClass('hidden');
+    $('#activity-{{ activity.id }}-registration-message').html('{{ registration_ends_message }}');
 }, {{ registration_start_in }}000);
 {% endif %}
 
 {% if registration_end_in %}
 setTimeout(function(){
-    $('#subject-{{ subject.id }}-registration-link').addClass('hidden');
-    $('#subject-{{ subject.id }}-registration-message').html('{{ registration_ended_message }}');
+    $('#activity-{{ activity.id }}-registration-link').addClass('hidden');
+    $('#activity-{{ activity.id }}-registration-message').html('{{ registration_ended_message }}');
 }, {{ registration_end_in }}000);
 {% endif %}
 </script>
