@@ -19,6 +19,7 @@ x-leprikon: &leprikon
     SENTRY_ENVIRONMENT: 'arttep'
     SERVER_EMAIL: '"Art-tep" <art-tep@leprikon.cz>'
     SUPERVISORD_RUN: "gunicorn cron"
+    CMSPLUGIN_FILER_MIGRATED: yes
   volumes:
     - ./data:/app/data
     - ./htdocs/media:/app/htdocs/media
