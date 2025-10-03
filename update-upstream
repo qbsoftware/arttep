@@ -1,3 +1,3 @@
 #!/bin/sh
 
-curl https://www.art-tep.cz/ > static/index.html
+curl https://www.art-tep.cz/ | sed 's/art-tep@centrum.cz/info@art-tep.cz/g' > static/index.html
